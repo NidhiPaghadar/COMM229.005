@@ -1,9 +1,9 @@
-//Student Name - Nidhiben Paghadar
-//Student ID - 301220138
+//File: index.js
+//Author : Nidhiben Paghadar 
+//Student Id : 301220138
 
-
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 let indexController = require('../controllers/index')
 
 /* GET home page. */
@@ -20,6 +20,7 @@ router.get('/services', indexController.services);
 
 /* GET contact page. */
 router.get('/contact', indexController.contact);
+
 
 
 module.exports = router;
