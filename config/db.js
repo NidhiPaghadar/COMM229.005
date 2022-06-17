@@ -14,10 +14,10 @@ let mongoose = require('mongoose');
 
 
 module.exports = function(){
-    Console.log('mongoose');
+    
     //connect to DB
-    mongoose.connect(DB_CONNECTION);
-    Console.log('mongoose');
+    mongoose.connect(DB_CONNECTION, {useNewUrlParser: true, useUnifiedTopology: true});
+    console.log("inside database");
     let mongoDB = mongoose.connection;
     mongoDB.on('error', console.error.bind(console,'connection error :  '));
     mongoDB.once('open',()=>{
