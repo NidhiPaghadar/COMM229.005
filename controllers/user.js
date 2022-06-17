@@ -1,8 +1,7 @@
 /*
-File Name - inventory.js
-Student Name - Pratiksinh Makwana
-Student ID - 301219863
-Date - 17-02-2022
+File Name - user.js
+Student Name - Nidhiben Paghadar
+Student ID - 301220138
 */
 
 const inventory = require('../models/inventory');
@@ -16,10 +15,10 @@ exports.user = function(req, res, next) {
     });
 }
 
-exports.pratik = function(req, res, next) {
+exports.nidhi = function(req, res, next) {
     res.render('user', { 
         title: 'User',
-        name: 'pratik'
+        name: 'nidhi'
     });
 }
 
@@ -67,6 +66,7 @@ function getErrorMessage(err) {
 
   //registration 
 module.exports.register = function(req, res, next) {
+  console.log('register post');
     if (!req.user) {
       console.log(req.body);
   
@@ -100,6 +100,7 @@ module.exports.register = function(req, res, next) {
 //render login page
   
   module.exports.renderlogin = function(req, res, next) {
+    console.log('inside login');
     if (!req.user) {
       res.render('auth/login', {
         title: 'Login',
@@ -120,6 +121,7 @@ module.exports.register = function(req, res, next) {
 
 //login
 module.exports.login = function(req, res, next){
+  console.log('inside login');
     passport.authenticate('local', {   
       successRedirect: req.session.url || '/inventory/list',
       failureRedirect: '/users/login',

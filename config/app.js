@@ -49,7 +49,7 @@ app.use(express.static(path.join(__dirname, '../views')));
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-
+require('./passport')(passport);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/inventory', inventoryRouter);

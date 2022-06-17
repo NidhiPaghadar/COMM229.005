@@ -18,6 +18,7 @@ function authLocal(username, password, done){
     console.log('---> authLocal function');
     
     User.findOne({username: username}, (err, user)=>{
+        console.log(username);
         if (err) {
             return done(err);
         }

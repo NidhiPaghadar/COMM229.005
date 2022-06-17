@@ -1,8 +1,7 @@
 /*
 File Name - inventory.js
-Student Name - Pratiksinh Makwana
-Student ID - 301219863
-Date - 17-02-2022
+Student Name - Nidhiben Paghadar
+Student ID - 301220138
 */
 
 
