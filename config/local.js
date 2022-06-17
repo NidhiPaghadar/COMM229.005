@@ -14,7 +14,7 @@ module.exports = function() {
     passport.use(new LocalStrategy(authLocal));
 };
 
-function authLocal(username, password, done){
+async function authLocal(username, password, done){
     console.log('---> authLocal function');
     
     User.findOne({username: username}, (err, user)=>{
